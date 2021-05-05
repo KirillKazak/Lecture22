@@ -6,14 +6,18 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+class MainActivity : AppCompatActivity() {
 
-open class MainActivity : AppCompatActivity() {
+    companion object obj {
+        val EMAIL = "email"
+        val PASSWORD = "password"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val EMAIL = "email"
-        val PASSWORD = "password"
+
 
         val email = findViewById<EditText>(R.id.edit_text_email)
         val password = findViewById<EditText>(R.id.edit_text_password)
